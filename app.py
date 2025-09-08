@@ -414,7 +414,7 @@ with gr.Blocks(title="OCR → LaTeX", theme=gr.themes.Base()) as demo:
                 sources=["upload", "webcam"],
                 webcam_options=gr.WebcamOptions(mirror=False),
             )
-            model_sel = gr.Dropdown(choices=["V2 (Attention)", "V1 (CTC)"], value="V1 (CTC)", label="Model")
+            model_sel = gr.Radio(choices=["V2 (Attention)", "V1 (CTC)"], value="V1 (CTC)", label="Model")
             run_btn = gr.Button("Recognize", variant="primary")
             load_solution_btn = gr.Button("Load solution", variant="secondary")
         with gr.Column(scale=1):
